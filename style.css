@@ -1,9 +1,13 @@
 body {
-    background-color: lightsteelblue;
+    background-image: url("https://wallpaper.dog/large/743770.jpg");
+}
+button:hover {
+    background-color: lightcyan;
 }
 
 h1 {
-    color: black;
+    background-color: lightcyan;
+    color: rgb(8, 9, 9);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -13,6 +17,7 @@ h1 {
 div {
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 0px solid black;
     padding: 5px;

@@ -13,17 +13,14 @@ async function handleFetch() {
     
 
 
-let pokemonName = data.pokemonName;
 let imgID = data.id;
 console.log(imgID);
-console.log(pokemonName);
 
 // outputDiv.textContent = pokemonName;
 outputDiv.innerHTML = `
     <div class="card" style="width 20px;">
     <div class="card-body">  
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${imgID}.png" alt="pokemon">
-
     <h3 class="card-title">${pokemonCharacter}</h3>
     </div>
     </div>
