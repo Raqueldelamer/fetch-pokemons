@@ -9,29 +9,32 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <nav>
+        <a href="index.html"><button>HOME</button></a>
+        <a href="poke-items.html"> <button>ITEMS</button></a>
+    </nav>
     
     <main>
-
 <form>
     <div class="container min-vh-10 d-flex justify-content-center">
         <div class="row">
             <div class="col">
             <div class="card">
-            <label for="pokemon-info">Pokemon ID#:</label>
+            <label for="pokemon-info">Enter Pokemon ID#:</label>
             <input type="text" name="pokemon-info" id="pokemon-info">
             <button type="button" id="fetch-button">Click Fetch:</button>
-        </div>
-    </form>
-    <div id="character-output"></div>
-
-    <ul id="keyword-list">
-    </ul>
-
+    </div>
+</form>
+    <div id="character-output">
+    <div id="language">
+    <ul id="keyword-list"></ul>
+    </div>
+    
     </main>
     
-    <script src="poke-items.js"></script>
+<script src="poke-items.js"></script>
     
-    </body>
-    </html>
+    
+</body>
+</html>

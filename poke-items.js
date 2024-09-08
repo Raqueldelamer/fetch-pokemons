@@ -1,42 +1,43 @@
-console.log("Hello from poke-items.js!")
+console.log("Hello from poke-items.js!");
 
 let fetchButton1 = document.getElementById("fetch-button");
 let pokemonInfoInput = document.getElementById("pokemon-info");
-let outputDiv = document.getElementById("character-output")
+let outputDiv = document.getElementById("character-output");
 let keywordUL = document.getElementById("keyword-list");
 
 async function handleFetch() {
-    console.log("fetch Pokemons stats!");
-    let itemCode = pokemonInfoInput.value;
-    let result = await fetch(`https://pokeapi.co/api/v2/item/${itemCode}`);
-    console.log(result); 
-    let data = await result.json();
-    console.log(data);
+  console.log("fetch Pokemons stats!");
 
-    //let pokemonCharacter = data.id[i]
-    let pokemonAttribute = data.attributes[0].name;
-    let pokeLanguage = data.names[3].language.name;
-    let itemName = data.names[3].name;
+  let itemCode = pokemonInfoInput.value;
 
-    console.log(pokeLanguage);
+  let result = await fetch(`https://pokeapi.co/api/v2/item/${itemCode}`);
+  console.log(result);
+  let data = await result.json();
+  console.log(data);
 
-    // <h3 class="card-title">${pokemonCharacter}</h3>
-    
-    // let pokemonType = data.types[0].type.name;
-    
+  let languages = data.names;
 
-let imgID = data.id;
-console.log(imgID);
+  let html = '';
+  for(let i=0; i < languages.length; i++ ) {
+      html += `<li>${languages[i].name}</li>  \n`;
+      console.log(html);
+  }
+  console.log(html);
 
-// outputDiv.textContent = infoID;
+  let imgID = data.id;
+  console.log(imgID);
+
 outputDiv.innerHTML = `
+
     <div class="card" style="width 20px;">
     <div class="card-body">  
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${imgID}.png" alt="pokemon">
-    <h3>Language: ${pokeLanguage}</h3>
-    <h3>Item: ${itemName}</h3>
+  
+    <h4>ID: ${itemCode}</h4>
+    <ul id="keyword-list">ITEM LANGUAGES: ${html}</ul>
+
     </div>
-    </div>
+</div>
 `;
 }
 
