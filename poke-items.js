@@ -11,9 +11,9 @@ async function handleFetch() {
   let itemCode = pokemonInfoInput.value;
 
   let result = await fetch(`https://pokeapi.co/api/v2/item/${itemCode}`);
-  console.log(result);
+    console.log(result);
   let data = await result.json();
-  console.log(data);
+    console.log(data);
 
   let languages = data.names;
 
@@ -22,10 +22,10 @@ async function handleFetch() {
       html += `<li>${languages[i].name}</li>  \n`;
       console.log(html);
   }
-  console.log(html);
+    console.log(html);
 
   let imgID = data.id;
-  console.log(imgID);
+    console.log(imgID);
 
 outputDiv.innerHTML = `
 

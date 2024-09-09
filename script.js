@@ -4,19 +4,17 @@ let pokemonCharacterInput = document.getElementById("pokemon-character");
 let outputDiv = document.getElementById("character-output")
 
 async function handleFetch() {
-    console.log("fetch Pokemons!");
+        console.log("fetch Pokemons!");
     let pokemonCharacter = pokemonCharacterInput.value;
     let result = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonCharacter}`);
-    console.log(result); 
-    let data = await result.json();
-    console.log(data);
+        console.log(result); 
     
+    let data = await result.json();
+        console.log(data);
+    
+    let imgID = data.id;
+        console.log(imgID);
 
-
-let imgID = data.id;
-console.log(imgID);
-
-// outputDiv.textContent = pokemonName;
 outputDiv.innerHTML = `
     <div class="card" style="width 20px;">
     <div class="card-body">  
