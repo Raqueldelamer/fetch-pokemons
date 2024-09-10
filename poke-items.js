@@ -29,15 +29,13 @@ async function handleFetch() {
 
 outputDiv.innerHTML = `
 
-    <div class="card" style="width 20px;">
+  <div class="card" style="width 20px;">
     <div class="card-body">  
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${imgID}.png" alt="pokemon">
-  
-    <h4>ID: ${itemCode}</h4>
-    <ul id="keyword-list">ITEM LANGUAGES: ${html}</ul>
-
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${imgID}.png" alt="pokemon">
+        <h4>ID: ${itemCode}</h4>
+      <ul id="keyword-list">ITEM LANGUAGES: ${html}</ul>
     </div>
-</div>
+  </div>
 `;
 }
 
